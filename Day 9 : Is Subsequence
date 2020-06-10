@@ -1,0 +1,19 @@
+//Using Two Pointer Method
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+       int sLen = s.length();
+       int tLen = t.length();
+        if(sLen == 0){
+            return true;
+        }
+        int sIndex = 0;
+        int tIndex = 0;
+        while(sIndex < sLen && tIndex < tLen){
+            if(s.charAt(sIndex) == t.charAt(tIndex))
+                sIndex++;
+                tIndex++;
+        }
+        return sIndex == sLen;
+        
+    }
+}
